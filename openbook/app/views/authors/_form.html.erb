@@ -1,0 +1,46 @@
+  <%= form_with(model: author, local: true) do |form| %>
+    <div class="col-sm-6 form-group">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: 'form-control',placeholder: 'Enter your name' %>
+      <% if author.errors.any? %>
+        <p class="text-danger">
+          <%= author.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :email %>
+      <%= form.text_field :email, class: 'form-control',placeholder: 'Enter your email' %>
+      <% if author.errors.any? %>
+        <p class="text-danger">
+          <%= author.errors.messages[:email].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :phone %>
+      <%= form.text_field :phone, class: 'form-control',placeholder: 'Enter your phone' %>
+      <% if author.errors.any? %>
+        <p class="text-danger">
+          <%= author.errors.messages[:phone].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :website %>
+      <%= form.text_field :website, class: 'form-control',placeholder: 'Enter your website' %>
+      <% if author.errors.any? %>
+        <p class="text-danger">
+          <%= author.errors.messages[:website].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="actions ml-3">
+      <%= form.submit class: 'btn btn-outline-primary'%>
+      <%= link_to 'Back', publishers_path, class: "btn btn-outline-primary ml-3" %>
+    </div>
+  <% end %>

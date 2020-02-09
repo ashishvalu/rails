@@ -1,0 +1,106 @@
+  <%= form_with(model: order, local: true) do |form| %>
+    <div class="col-sm-6 form-group">
+      <%= form.label :user_id %>
+      <%= form.text_field :user_id , class: 'form-control', placeholder: 'Enter your user_id' %>
+      <% if order.errors.any? %>
+        <p class="text-danger">
+          <%= order.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :address %>
+      <%= form.text_field :address , class: 'form-control', placeholder: 'Enter your address' %>
+      <% if order.errors.any? %>
+        <p class="text-danger">
+          <%= order.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :city %>
+      <%= form.text_field :city, class: 'form-control', placeholder: 'Enter your name city' %>
+      <% if order.errors.any? %>
+        <p class="text-danger">
+          <%= order.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :state %>
+      <%= form.text_field :state, class: 'form-control', placeholder: 'Enter your state' %>
+      <% if order.errors.any? %>
+        <p class="text-danger">
+          <%= order.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :postal_code %>
+      <%= form.text_field :postal_code, class: 'form-control', placeholder: 'Enter your postal_code' %>
+      <% if order.errors.any? %>
+        <p class="text-danger">
+          <%= order.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :country %>
+      <%= form.text_field :country , class: 'form-control', placeholder: 'Enter your country' %>
+      <% if order.errors.any? %>
+        <p class="text-danger">
+          <%= order.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :phone %>
+      <%= form.text_field :phone, class: 'form-control', placeholder: 'Enter your Phone' %>
+      <% if order.errors.any? %>
+        <p class="text-danger">
+          <%= order.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :total_price %>
+      <%= form.text_field :total_price, class: 'form-control', placeholder: 'Enter your total_price' %>
+      <% if order.errors.any? %>
+        <p class="text-danger">
+          <%= order.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :payment_mode %>
+      <%= form.text_field :payment_mode, class: 'form-control', placeholder: 'Enter your payment_mode' %>
+      <% if order.errors.any? %>
+        <p class="text-danger">
+          <%= order.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %> 
+    </div>
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :payment_id %>
+      <%= form.text_field :payment_id , class: 'form-control', placeholder: 'Enter your payment_id' %>
+      <% if order.errors.any? %>
+        <p class="text-danger">
+          <%= order.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit class: 'btn btn-outline-primary'%>
+      <%= link_to 'Back', orders_path, class: 'btn btn-outline-primary' %>
+    </div>
+  <% end %>

@@ -1,0 +1,17 @@
+  <%= form_with(model: categary, local: true) do |form| %>
+    <div class="col-sm-6 form-group">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: 'form-control',placeholder: 'Enter your Name'%>
+      <% if categary.errors.any? %>
+        <p>
+          <%= categary.errors.messages[:name].join(', ')%>
+        </p>
+        <% end %>
+    </div>
+
+    <div class="actions ml-3">
+      <%= form.submit class:' btn btn-outline-primary'%>
+      <%= link_to 'Back', categaries_path, class:"btn btn-outline-primary" %>
+
+    </div>
+  <% end %>

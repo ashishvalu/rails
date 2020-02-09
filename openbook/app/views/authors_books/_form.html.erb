@@ -1,0 +1,25 @@
+  <%= form_with(model: authors_book, local: true) do |form| %>
+    <div class="col-sm-6 from-group">
+      <%= form.label :book_id %>
+      <%= form.text_field :book_id, class: 'form-control', placeholder:"Enter your book_id" %>
+      <% if authors_book.errors.any? %>
+        <p class="text-danger">
+          <%= authors_book.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-6 from-group">
+      <%= form.label :author_id %>
+      <%= form.text_field :author_id, class: 'form-control', placeholder:"Enter your author_id" %>
+      <% if authors_book.errors.any? %>
+        <p class="text-danger">
+          <%= authors_book.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+     <br>
+    <div class="actions ml-3">
+      <%= form.submit class: "btn btn-outline-primary ml-3"%>
+    </div>
+  <% end %>

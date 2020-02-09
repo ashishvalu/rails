@@ -1,0 +1,76 @@
+<%= form_with(model: book, local: true) do |form| %>
+    <div class="col-sm-6 form-group">
+      <%= form.label :name %>
+      <%= form.text_field :name , class: 'form-control', placeholder: 'Enter your name'%>
+      <% if book.errors.any? %>
+        <p class="text-danger">
+          <%= book.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :price %>
+      <%= form.text_field :price, class: 'form-control', placeholder: 'Enter your price' %>
+      <% if book.errors.any? %>
+        <p class="text-danger">
+          <%= book.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :Publisher_id %>
+      <%= form.text_field :Publisher_id , class: 'form-control', placeholder: 'Enter your Publisher_id'%>
+      <% if book.errors.any? %>
+        <p class="text-danger">
+          <%= book.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :categary_id %>
+      <%= form.text_field :categary_id, class: 'form-control', placeholder: 'Enter your categary_id' %>
+      <% if book.errors.any? %>
+        <p class="text-danger">
+          <%= book.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :isbn10 %>
+      <%= form.text_field :isbn10, class: 'form-control', placeholder: 'Enter your isbn10' %>
+      <% if book.errors.any? %>
+        <p class="text-danger">
+          <%= book.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :isbn13 %>
+      <%= form.text_field :isbn13, class: 'form-control', placeholder: 'Enter your isbn13' %>
+      <% if book.errors.any? %>
+        <p class="text-danger">
+          <%= book.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :language %>
+      <%= form.text_field :language, class: 'form-control', placeholder: 'Enter your language' %>
+      <% if book.errors.any? %>
+        <p class="text-danger">
+          <%= book.errors.messages[:name].join(', ') %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="actions ml-3">
+      <%= form.submit class: 'btn btn-outline-primary' %>
+      <%= link_to 'Back', books_path ,class: 'btn btn-outline-primary' %>
+    </div>
+  <% end %>

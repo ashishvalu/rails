@@ -1,0 +1,40 @@
+  <%= form_with(model: order_detail, local: true) do |form| %>
+    <div class="col-sm-6 form-group">
+      <%= form.label :order_id %>
+      <%= form.text_field :order_id, class: 'form-control', placeholder:"Enter your order_id" %>
+        <% if order_detail.errors.any? %>
+          <p class="text-danger">
+            <%= order_detail.errors.messages[:name].join(', ') %>
+          </p>
+        <% end %>
+      </div>
+
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :books_id %>
+      <%= form.text_field :books_id, class: 'form-control', placeholder:"Enter your book_id" %>
+        <% if order_detail.errors.any? %>
+          <p class="text-danger">
+            <%= order_detail.errors.messages[:name].join(', ') %>
+          </p>
+        <% end %>
+      </div>
+
+
+    <div class="col-sm-6 form-group">
+      <%= form.label :price %>
+      <%= form.text_field :price, class: 'form-control', placeholder:"Enter price" %>
+        <% if order_detail.errors.any? %>
+          <p class="text-danger">
+            <%= order_detail.errors.messages[:name].join(', ') %>
+          </p>
+        <% end %>
+      </div>
+
+
+    <div class="actions ">
+      <%= form.submit class: "btn btn-outline-primary ml-3"%>
+      <%= link_to 'Back', order_details_path, class: "btn btn-outline-primary ml-3" %>
+
+    </div>
+  <% end %>
